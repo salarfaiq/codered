@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Claude Approval LED — Floating indicator + stats overlay panel.
+CodeRed — Floating indicator + stats overlay panel.
 """
 
 import os
@@ -306,7 +306,7 @@ class StatsView(NSView):
 
         # Title
         y_pos -= 22
-        draw_text(self,"Claude LED", 16, True, 15, y_pos, w,
+        draw_text(self,"CodeRed", 16, True, 15, y_pos, w,
                         0.15, 0.9, 0.15)
 
         # Divider
@@ -410,7 +410,7 @@ class AppDelegate(NSObject):
 
         t = threading.Thread(target=run_socket_server, args=(self,), daemon=True)
         t.start()
-        print(f"Claude LED running. Socket: {SOCKET_PATH}", flush=True)
+        print(f"CodeRed running. Socket: {SOCKET_PATH}", flush=True)
 
     def showStats(self):
         if self.hideStatsTimer:
